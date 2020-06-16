@@ -10,8 +10,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=20G
-#SBATCH --job-name=bbbq_random_peptides
-#SBATCH --output=bbbq_random_peptides.log
+#SBATCH --job-name=create_luts
+#SBATCH --output=create_luts.log
 module load R Python/3.8.2-GCCcore-9.3.0
 
 make data
