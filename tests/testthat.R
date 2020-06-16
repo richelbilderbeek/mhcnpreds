@@ -1,4 +1,4 @@
 library(testthat)
-library(bbbq)
+library(mhcnpreds)
 
-test_check("bbbq")
+test_check("mhcnpreds")
