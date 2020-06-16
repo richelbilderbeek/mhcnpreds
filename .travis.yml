@@ -1,0 +1,20 @@
+language: R
+dist: bionic
+cache: packages
+
+r_packages:
+  - devtools
+
+r_github_packages:
+  - jimhester/covr
+  - jimhester/lintr
+  - richelbilderbeek/mhcnuggetsr
+
+after_success:
+  - Rscript -e 'lintr::lint_package()'
+  - Rscript -e 'covr::codecov()'
+  - Rscript -e 'goodpractice::gp()'
+
+after_failure:
+  - pwd
+  - find . | egrep "fasta"

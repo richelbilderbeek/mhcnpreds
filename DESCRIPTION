@@ -1,0 +1,30 @@
+Package: mhcnpreds
+Title: MHCnuggets Predictions
+Version: 0.1
+Authors@R: 
+    person(given = "Richel",
+           family = "Bilderbeek",
+           role = c("aut", "cre"),
+           email = "richel@richelbilderbeek.nl")
+Description:
+    'MHCnuggets' is a Python package to predict the IC50 value for
+    peptides for multiple haplotypes.
+    'mhcnuggetsr' is an R package to call 'MHCnuggets'.
+    This package contains pre-calculated prediction similar to look-up tables.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Imports:
+    ggplot2,
+    methods,
+    seqinr,
+    stringr,  
+    tibble
+Suggests:
+    devtools,
+    testit,
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
