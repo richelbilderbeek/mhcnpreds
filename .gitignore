@@ -1,21 +1,5 @@
-inst/doc
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-UP000001584_83332.fasta.gz
-tmhmm_result\.pdf
-tmhmm_result\.htmlnet_mhc2_pan.html
-net_mhc2_pan.html
-tmhmm_result.html
-doc/bianchi_textor_bogaart_2017.pdf
-doc/bianchi_textor_bogaart_2017_data_sheet_1.pdf
-doc/bianchi_textor_bogaart_2017_rcode/
-net_mhc2_pan_short.html
-*.pro.user
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-scripts/
-build-xml_to_csv-Desktop-Debug/
-*.xml~
+
