@@ -14,3 +14,34 @@ test_that("use", {
     )
   )
 })
+
+test_that("detailed use", {
+
+  t <- readr::read_csv(
+    get_lut_filename(
+      n_aas = 9,
+      mhc_haplotype = "HLA-A01:01"
+    )
+  )
+  lowest_ic50 <- min(t$ic50)
+  median_ic50 <- median(t$ic50)
+  heighest_ic50 <- max(t$ic50)
+
+  # 2%: closest to low
+  ic50 <- get_ic50_threshold(
+    n_aas = 9,
+    mhc_haplotype = "HLA-A01:01",
+    percentile = 0.02
+  )
+  expect_true(ic50 < median_ic50)
+
+  # 98%: closest to high
+  ic50 <- get_ic50_threshold(
+    n_aas = 9,
+    mhc_haplotype = "HLA-A01:01",
+    percentile = 0.98
+  )
+  expect_true(ic50 > median_ic50)
+
+
+})

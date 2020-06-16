@@ -9,7 +9,7 @@ get_lut_filename <- function(
   # Non-portable filename
   filename <- paste0(mhc_haplotype, "_", n_aas, ".csv")
   # Portable filename
-  filename <- stringr::str_replace(filename, ":", "_")
+  filename <- stringr::str_replace_all(filename, ":", "_")
   full <- system.file("extdata", filename, package = "mhcnpreds")
   if (!file.exists(full)) {
     stop(

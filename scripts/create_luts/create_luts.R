@@ -7,8 +7,12 @@ haplotypes <- c(
   mhcnuggetsr::get_trained_mhc_2_haplotypes()
 )
 
+# 2 lengths, 2 peptides, all haplotypes: 51 minutes
+# 2 lengths, 10 peptides, all haplotypes: ?510 minutes
+
 peptide_lengths <- c(9, 10) # peptide length in amino acids
-n_peptides <- 2 # per peptide length and per haplotype
+n_peptides <- 10 # per peptide length and per haplotype
+
 
 if (mhcnuggetsr::is_on_ci()) {
   n_aases <- c(9, 10)
