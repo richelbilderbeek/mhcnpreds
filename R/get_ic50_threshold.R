@@ -14,8 +14,16 @@ get_ic50_threshold <- function(
     n_aas = n_aas,
     mhc_haplotype = mhc_haplotype
   )
-  stats::quantile(
-    readr::read_csv(filename)$ic50,
-    probs = percentile
+  as.numeric(
+    stats::quantile(
+      readr::read_csv(
+        filename,
+        col_types = readr::cols(
+          peptide = readr::col_character(),
+          ic50 = readr::col_double()
+        )
+      )$ic50,
+      probs = percentile
+    )
   )
 }

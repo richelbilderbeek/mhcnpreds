@@ -24,7 +24,7 @@ for (peptide_length in peptide_lengths) {
 
   for (haplotype in haplotypes) {
     filename <- paste0(haplotype, "_", peptide_length, ".csv")
-    filename <- stringr::str_replace(filename, ":", "_")
+    filename <- stringr::str_replace_all(filename, ":", "_")
     t <- tibble::tibble(
       peptide = peptides,
       ic50 = NA
