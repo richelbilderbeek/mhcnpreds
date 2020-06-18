@@ -46,8 +46,5 @@ for (peptide_length in peptide_lengths) {
       t$ic50[i] <- ic50
     }
     readr::write_csv(t, filename)
-
-
   }
 }
-
