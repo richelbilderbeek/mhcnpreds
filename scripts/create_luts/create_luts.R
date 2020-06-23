@@ -11,7 +11,7 @@ haplotypes <- c(
 # 2 lengths, 10 peptides, all haplotypes: ?510 minutes
 
 peptide_lengths <- c(9, 10, 13) # peptide length in amino acids
-n_peptides <- 100 # per peptide length and per haplotype
+n_peptides <- 20 # per peptide length and per haplotype
 
 
 if (mhcnuggetsr::is_on_ci()) {
