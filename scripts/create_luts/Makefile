@@ -12,7 +12,12 @@
 #
 
 all:
-	Rscript create_luts.R
+	sbatch ../../peregrine/scripts/run_r_script.sh create_luts.R random 9 h1
+	sbatch ../../peregrine/scripts/run_r_script.sh create_luts.R random 9 h2
+	sbatch ../../peregrine/scripts/run_r_script.sh create_luts.R random 10 h1
+	sbatch ../../peregrine/scripts/run_r_script.sh create_luts.R random 10 h2
+	sbatch ../../peregrine/scripts/run_r_script.sh create_luts.R random 13 h1
+	sbatch ../../peregrine/scripts/run_r_script.sh create_luts.R random 13 h2
 
 zip:
 	zip luts.zip *.csv *.log *.R Makefile *.sh
