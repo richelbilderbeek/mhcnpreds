@@ -29,7 +29,7 @@ message("peptide_length: '", peptide_length, "'")
 haplotype_id <- args[3]
 message("haplotype_id: '", haplotype_id, "'")
 
-t_haplotype <- get_haplotype_lut()
+t_haplotype <- mhcnpreds::get_haplotype_lut()
 haplotype <- t_haplotype$haplotype[t_haplotype$id == haplotype_id]
 message("haplotype: ", haplotype)
 
