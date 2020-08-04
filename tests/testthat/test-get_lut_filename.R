@@ -1,10 +1,21 @@
 test_that("use", {
-  n_aas <- 9
+  peptide_length <- 9
+  mhc_haplotype <- "HLA-A01:01"
+  filename <- get_lut_filename(
+    peptide_length = peptide_length,
+    mhc_haplotype = mhc_haplotype
+  )
+  expect_equal(basename(filename), "HLA-A01_01_9.csv")
+})
+
+test_that("use", {
+  peptide_length <- 9
   mhc_haplotype <- "HLA-A01:01"
 
   filename <- get_lut_filename(
-    n_aas = n_aas,
+    source = "random",
+    peptide_length = peptide_length,
     mhc_haplotype = mhc_haplotype
   )
-  expect_true(stringr::str_detect(filename, pattern = as.character(n_aas)))
+  expect_equal(basename(filename), "random_h11_9.csv")
 })

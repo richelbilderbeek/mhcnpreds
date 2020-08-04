@@ -2,19 +2,24 @@
 % Please edit documentation in R/get_lut_filename.R
 \name{get_lut_filename}
 \alias{get_lut_filename}
-\title{Get the filename for a lookup-table for a specific peptide size
-and haplotype}
+\title{Get the filename for a lookup-table}
 \usage{
-get_lut_filename(n_aas, mhc_haplotype)
+get_lut_filename(source = NA, peptide_length, mhc_haplotype)
 }
 \arguments{
-\item{n_aas}{number of amino acids}
+\item{source}{source of IC50s:\cr
+\enumerate{
+  \item \code{random} base quantiles on randomly simulated peptides
+  \item \code{NA} use old interface, to become obsoleted
+}}
+
+\item{peptide_length}{length of the peptide in amino acids}
 
 \item{mhc_haplotype}{haplotype of either HMC-I or MHC-II.
 Use \link{get_mhc1_haplotypes} to get a list of all MHC-I haplotypes.
 Use \link{get_mhc2_haplotypes} to get a list of all MHC-II haplotypes.}
 }
 \description{
-Get the filename for a lookup-table for a specific peptide size
-and haplotype
+Get the filename for a lookup-table for a specific source,
+peptide size and haplotype.
 }

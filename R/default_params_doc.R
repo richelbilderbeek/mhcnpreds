@@ -22,6 +22,11 @@
 #' @param peptide_length length of the peptide in amino acids
 #' @param protein_sequence a protein sequence
 #' @param protein_sequences one or more protein sequences
+#' @param source source of IC50s:\cr
+#' \enumerate{
+#'   \item \code{random} base quantiles on randomly simulated peptides
+#'   \item \code{NA} use old interface, to become obsoleted
+#' }
 #' @param verbose set to TRUE for more output
 #' @author Richèl J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
@@ -42,6 +47,7 @@ default_params_doc <- function(
   peptide_length,
   protein_sequence,
   protein_sequences,
+  source,
   verbose
 ) {
   # Nothing

@@ -2,14 +2,12 @@
 % Please edit documentation in R/get_ic50_threshold.R
 \name{get_ic50_threshold}
 \alias{get_ic50_threshold}
-\title{Get the IC50 value to serve as a threshold,
-for example, get the IC50 value from below which the
-peptides bind strongest}
+\title{Look up the IC50 value of a certain quantile}
 \usage{
-get_ic50_threshold(n_aas = 9, mhc_haplotype, percentile = 0.02)
+get_ic50_threshold(peptide_length = 9, mhc_haplotype, percentile = 0.02)
 }
 \arguments{
-\item{n_aas}{number of amino acids}
+\item{peptide_length}{length of the peptide in amino acids}
 
 \item{mhc_haplotype}{haplotype of either HMC-I or MHC-II.
 Use \link{get_mhc1_haplotypes} to get a list of all MHC-I haplotypes.
@@ -19,7 +17,8 @@ Use \link{get_mhc2_haplotypes} to get a list of all MHC-II haplotypes.}
 \code{percentile} from the worse binders}
 }
 \description{
-Get the IC50 value to serve as a threshold,
-for example, get the IC50 value from below which the
-peptides bind strongest
+Look up the IC50 value of a certain quantile.
+Such a value can serve as a threshold:
+for example, to get the IC50 value from below which the
+peptides bind strongest.
 }

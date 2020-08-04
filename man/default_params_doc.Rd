@@ -20,6 +20,7 @@ default_params_doc(
   peptide_length,
   protein_sequence,
   protein_sequences,
+  source,
   verbose
 )
 }
@@ -59,6 +60,12 @@ Use \link{get_mhc2_haplotypes} to get a list of all haplotypes}
 \item{protein_sequence}{a protein sequence}
 
 \item{protein_sequences}{one or more protein sequences}
+
+\item{source}{source of IC50s:\cr
+\enumerate{
+  \item \code{random} base quantiles on randomly simulated peptides
+  \item \code{NA} use old interface, to become obsoleted
+}}
 
 \item{verbose}{set to TRUE for more output}
 }
