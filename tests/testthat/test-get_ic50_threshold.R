@@ -2,6 +2,25 @@ test_that("use", {
 
   expect_silent(
     get_lut_filename(
+      source = "random",
+      peptide_length = 9,
+      mhc_haplotype = "HLA-A01:01"
+    )
+  )
+  expect_silent(
+    get_ic50_threshold(
+      source = "random",
+      peptide_length = 9,
+      mhc_haplotype = "HLA-A01:01",
+      percentile = 0.02
+    )
+  )
+})
+
+test_that("use, deprecated", {
+
+  expect_silent(
+    get_lut_filename(
       peptide_length = 9,
       mhc_haplotype = "HLA-A01:01"
     )
