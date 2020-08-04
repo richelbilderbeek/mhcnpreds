@@ -20,7 +20,6 @@ default_params_doc(
   peptide_length,
   protein_sequence,
   protein_sequences,
-  topology,
   verbose
 )
 }
@@ -60,9 +59,6 @@ Use \link{get_mhc2_haplotypes} to get a list of all haplotypes}
 \item{protein_sequence}{a protein sequence}
 
 \item{protein_sequences}{one or more protein sequences}
-
-\item{topology}{a topology,
-as created by \link[pureseqtmr]{predict_topology}}
 
 \item{verbose}{set to TRUE for more output}
 }

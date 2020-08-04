@@ -22,8 +22,6 @@
 #' @param peptide_length length of the peptide in amino acids
 #' @param protein_sequence a protein sequence
 #' @param protein_sequences one or more protein sequences
-#' @param topology a topology,
-#'   as created by \link[pureseqtmr]{predict_topology}
 #' @param verbose set to TRUE for more output
 #' @author Richèl J.C. Bilderbeek
 #' @note This is an internal function, so it should be marked with
@@ -44,7 +42,6 @@ default_params_doc <- function(
   peptide_length,
   protein_sequence,
   protein_sequences,
-  topology,
   verbose
 ) {
   # Nothing
