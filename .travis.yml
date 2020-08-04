@@ -7,7 +7,7 @@ r_github_packages:
   - jimhester/lintr
   - richelbilderbeek/mhcnuggetsr
 
-after_install:
+before_script:
   - Rscript -e 'mhcnuggetsr::install_mhcnuggets()'
 
 after_success:
