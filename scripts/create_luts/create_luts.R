@@ -14,12 +14,10 @@
 #
 
 peptide_sources <- c("random")
-peptide_lengths <- c(9)
+peptide_lengths <- c(9, 10)
 
 haplotype_lut <- mhcnpreds::get_haplotype_lut()
-haplotype_indices <- haplotype_lut$id[
-  haplotype_lut$haplotype %in% mhcnuggetsr::to_mhcnuggets_names(bbbq::get_mhc_haplotypes())
-]
+haplotype_indices <- haplotype_lut$id
 testthat::expect_true(all(haplotype_indices %in% mhcnpreds::get_haplotype_lut()$id))
 
 for (peptide_source in peptide_sources) {
