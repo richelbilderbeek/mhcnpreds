@@ -2,13 +2,13 @@ language: R
 dist: bionic
 cache: packages
 
-r_packages:
-  - devtools
-
 r_github_packages:
   - jimhester/covr
   - jimhester/lintr
   - richelbilderbeek/mhcnuggetsr
+
+script:
+  - echo "Do nothing"
 
 after_install:
   - Rscript -e 'mhcnuggetsr::install_mhcnuggets()'
