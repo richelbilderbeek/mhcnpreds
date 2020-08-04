@@ -7,9 +7,6 @@ r_github_packages:
   - jimhester/lintr
   - richelbilderbeek/mhcnuggetsr
 
-script:
-  - echo "Do nothing"
-
 after_install:
   - Rscript -e 'mhcnuggetsr::install_mhcnuggets()'
 
