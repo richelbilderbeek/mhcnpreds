@@ -20,14 +20,15 @@ get_lut_filename <- function(
       stop(
         glue::glue(
           "No lookup table exists for haplotype '{mhc_haplotype}' ",
-          "for peptides of {peptide_length} amino acids long for source 'NA'. \n",
+          "for peptides of {peptide_length} amino acids long ",
+          "for source 'NA'. \n",
           "Filename: '{filename}'"
         )
       )
     }
     return(full)
   }
-  haplotype_lut <- get_haplotype_lut()
+  haplotype_lut <- mhcnpreds::get_haplotype_lut()
 
   if (!mhc_haplotype %in% haplotype_lut$haplotype) {
     stop(
