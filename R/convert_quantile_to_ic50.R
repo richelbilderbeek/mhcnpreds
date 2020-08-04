@@ -1,6 +1,7 @@
 #' Convert a quantile to an IC50
 #' @param lut lookup table
 #' @param q the quantile
+#' @export
 convert_quantile_to_ic50 <- function(
   lut,
   q
