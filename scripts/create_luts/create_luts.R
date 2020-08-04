@@ -18,7 +18,7 @@ peptide_lengths <- c(9)
 
 haplotype_lut <- mhcnpreds::get_haplotype_lut()
 haplotype_indices <- haplotype_lut$id[
-  haplotype_lut$haplotype %in% mhcnuggetsr::to_mhcnuggets_name(bbbq::get_mhc_haplotypes())
+  haplotype_lut$haplotype %in% mhcnuggetsr::to_mhcnuggets_names(bbbq::get_mhc_haplotypes())
 ]
 testthat::expect_true(all(haplotype_indices %in% mhcnpreds::get_haplotype_lut()$id))
 
