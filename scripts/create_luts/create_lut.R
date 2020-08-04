@@ -14,7 +14,7 @@
 #
 library(testthat)
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) != 1) {
+if (length(args) != 3) {
   args <- c("random", "9", "h1")
 }
 testthat::expect_equal(length(args), 3)
