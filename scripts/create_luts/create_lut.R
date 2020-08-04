@@ -37,7 +37,7 @@ message("haplotype: ", haplotype)
 target_filename <- paste0(peptide_source, "_", haplotype_id, "_", peptide_length, ".csv")
 message("target_filename: '", target_filename, "'")
 
-n_peptides <- 100
+n_peptides <- 1000
 message("n_peptides: ", n_peptides)
 
 n_quantiles <- 100
@@ -58,6 +58,6 @@ ic50s <- mhcnuggetsr::predict_ic50(
   peptides = peptides
 )$ic50
 
-q <- mhcnpreds::convert_ic50s_to_quantiles(ic50s, n = 10)
+q <- mhcnpreds::convert_ic50s_to_quantiles(ic50s, n = n_quantiles)
 
 readr::write_csv(q, target_filename)
