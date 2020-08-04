@@ -37,10 +37,10 @@ message("haplotype: ", haplotype)
 target_filename <- paste0(peptide_source, "_", haplotype_id, "_", peptide_length, ".csv")
 message("target_filename: '", target_filename, "'")
 
-n_peptides <- 10
+n_peptides <- 100
 message("n_peptides: ", n_peptides)
 
-n_quantiles <- 10
+n_quantiles <- 100
 message("n_quantiles: ", n_quantiles)
 
 library(mhcnuggetsr)
