@@ -62,6 +62,11 @@ to get a list of all MHC-II haplotypes.}
 \item{protein_sequences}{one or more protein sequences}
 
 \item{verbose}{set to TRUE for more output}
+
+\item{haplotypes}{one ore more MHCnuggets haplotype IDs,
+for example \code{HLA-A33:01}.
+Use \link{get_haplotype_lut} to get a lookup table that maps
+a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name}
 }
 \description{
 This function does nothing. It is intended to inherit is parameters'

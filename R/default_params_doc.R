@@ -8,6 +8,10 @@
 #' for example \code{HLA-A33:01}.
 #' Use \link{get_haplotype_lut} to get a lookup table that maps
 #' a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name
+#' @param haplotypes one ore more MHCnuggets haplotype IDs,
+#' for example \code{HLA-A33:01}.
+#' Use \link{get_haplotype_lut} to get a lookup table that maps
+#' a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name
 #' @param haplotype_id the \code{mhcnpreds} haplotype ID,
 #' for example \code{h1}.
 #' Use \link{get_haplotype_lut} to get a lookup table that maps

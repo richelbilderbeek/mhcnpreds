@@ -6,6 +6,12 @@
 \usage{
 convert_haplotypes_to_haplotype_ids(haplotypes)
 }
+\arguments{
+\item{haplotypes}{one ore more MHCnuggets haplotype IDs,
+for example \code{HLA-A33:01}.
+Use \link{get_haplotype_lut} to get a lookup table that maps
+a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name}
+}
 \description{
 Convert one or more haplotypes (in MHCnuggets naming format)
 to haplotype IDs
