@@ -8,7 +8,8 @@ documentation.}
 default_params_doc(
   binding_strength_threshold,
   fasta_filename,
-  haplotypes,
+  haplotype,
+  haplotype_id,
   ic50_threshold,
   max_hydrophobicity,
   mhc_haplotype,
@@ -27,7 +28,15 @@ binding strength. A low threshold, e.g. \code{5.0}, selects for the top
 
 \item{fasta_filename}{name of a FASTA file}
 
-\item{haplotypes}{a list of MHC-I or MHC-II haplotypes}
+\item{haplotype}{the MHCnuggets haplotype ID,
+for example \code{HLA-A33:01}.
+Use \link{get_haplotype_lut} to get a lookup table that maps
+a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name}
+
+\item{haplotype_id}{the \code{mhcnpreds} haplotype ID,
+for example \code{h1}.
+Use \link{get_haplotype_lut} to get a lookup table that maps
+a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name}
 
 \item{ic50_threshold}{peptides with a predicted IC50 value (in nM)
 lower than this will be considered binders.

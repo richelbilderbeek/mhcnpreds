@@ -4,7 +4,14 @@
 #'   binding strength. A low threshold, e.g. \code{5.0}, selects for the top
 #'   5 percent best binders
 #' @param fasta_filename name of a FASTA file
-#' @param haplotypes a list of MHC-I or MHC-II haplotypes
+#' @param haplotype the MHCnuggets haplotype ID,
+#' for example \code{HLA-A33:01}.
+#' Use \link{get_haplotype_lut} to get a lookup table that maps
+#' a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name
+#' @param haplotype_id the \code{mhcnpreds} haplotype ID,
+#' for example \code{h1}.
+#' Use \link{get_haplotype_lut} to get a lookup table that maps
+#' a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name
 #' @param ic50_threshold peptides with a predicted IC50 value (in nM)
 #'   lower than this will be considered binders.
 #'   A threshold of 500 (nM) is common.
@@ -28,7 +35,8 @@
 default_params_doc <- function(
   binding_strength_threshold,
   fasta_filename,
-  haplotypes,
+  haplotype,
+  haplotype_id,
   ic50_threshold,
   max_hydrophobicity,
   mhc_haplotype,
