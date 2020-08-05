@@ -16,6 +16,10 @@
 #' for example \code{h1}.
 #' Use \link{get_haplotype_lut} to get a lookup table that maps
 #' a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name
+#' @param haplotype_ids one or more \code{mhcnpreds} haplotype IDs,
+#' for example \code{h1}.
+#' Use \link{get_haplotype_lut} to get a lookup table that maps
+#' a \code{mhcnpreds} haplotype ID to an MHCnuggets haplotype name
 #' @param ic50_threshold peptides with a predicted IC50 value (in nM)
 #'   lower than this will be considered binders.
 #'   A threshold of 500 (nM) is common.
@@ -40,7 +44,9 @@ default_params_doc <- function(
   binding_strength_threshold,
   fasta_filename,
   haplotype,
+  haplotypes,
   haplotype_id,
+  haplotype_ids,
   ic50_threshold,
   max_hydrophobicity,
   mhc_haplotype,
