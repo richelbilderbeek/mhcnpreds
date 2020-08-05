@@ -12,7 +12,7 @@ get_lut_filename <- function(
 
   if (!mhc_haplotype %in% haplotype_lut$haplotype) {
     stop(
-      "'mhc_haplotype' not in look-up table. ",
+      "'mhc_haplotype' not in lookup table. ",
       "'mhc_haplotype': ", mhc_haplotype
     )
   }
@@ -22,7 +22,7 @@ get_lut_filename <- function(
   if (!file.exists(full)) {
     stop(
       glue::glue(
-        "No lookup table found. \n",
+        "No lookup table found for the desired peptide length. \n",
         "'peptide_length': {peptide_length} \n",
         "'mhc_haplotype':  '{mhc_haplotype}' \n",
         "'filename': '{filename}'"
