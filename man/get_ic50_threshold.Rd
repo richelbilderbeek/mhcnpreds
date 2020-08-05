@@ -4,20 +4,9 @@
 \alias{get_ic50_threshold}
 \title{Look up the IC50 value of a certain quantile}
 \usage{
-get_ic50_threshold(
-  source = NA,
-  peptide_length = 9,
-  mhc_haplotype,
-  percentile = 0.02
-)
+get_ic50_threshold(peptide_length = 9, mhc_haplotype, percentile = 0.02)
 }
 \arguments{
-\item{source}{source of IC50s:\cr
-\enumerate{
-  \item \code{random} base quantiles on randomly simulated peptides
-  \item \code{NA} use old interface, to become obsoleted
-}}
-
 \item{peptide_length}{length of the peptide in amino acids}
 
 \item{mhc_haplotype}{haplotype of either HMC-I or MHC-II.

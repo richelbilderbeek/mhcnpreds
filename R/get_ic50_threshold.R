@@ -9,32 +9,14 @@
 #' \code{percentile} from the worse binders
 #' @export
 get_ic50_threshold <- function(
-  source = NA,
   peptide_length = 9,
   mhc_haplotype,
   percentile = 0.02
 ) {
   filename <- mhcnpreds::get_lut_filename(
-    source = source,
     peptide_length = peptide_length,
     mhc_haplotype = mhc_haplotype
   )
-  if (is.na(source)) {
-    # Oldskool method stores peptides and IC50s, instead of quantiles
-    ic50 <- as.numeric(
-      stats::quantile(
-        readr::read_csv(
-          filename,
-          col_types = readr::cols(
-            peptide = readr::col_character(),
-            ic50 = readr::col_double()
-          )
-        )$ic50,
-        probs = percentile
-      )
-    )
-    return(ic50)
-  }
   lut <- readr::read_csv(
     filename,
     col_types = readr::cols(
