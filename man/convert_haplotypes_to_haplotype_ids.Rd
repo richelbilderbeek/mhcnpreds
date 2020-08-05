@@ -17,7 +17,7 @@ Convert one or more haplotypes (in MHCnuggets naming format)
 to haplotype IDs
 }
 \examples{
-convert_haplotype_to_haplotype_ids("HLA-A33:01")
+convert_haplotypes_to_haplotype_ids("HLA-A33:01")
 }
 \author{
 Richèl J.C. Bilderbeek
