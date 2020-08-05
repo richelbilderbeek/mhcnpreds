@@ -6,7 +6,7 @@
 #' @examples
 #' convert_haplotype_to_haplotype_id("HLA-A33:01")
 #' @export
-convert_haplotype_to_haplotype_id <- function(
+convert_haplotype_to_haplotype_id <- function(#nolint indeed a long function name
   haplotype
 ) {
   lut <- mhcnpreds::get_haplotype_lut()

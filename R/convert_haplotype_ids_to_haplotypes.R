@@ -7,7 +7,7 @@
 #' @examples
 #' convert_haplotype_ids_to_haplotypes("h13")
 #' @export
-convert_haplotype_ids_to_haplotypes <- function(
+convert_haplotype_ids_to_haplotypes <- function(#nolint indeed a long function name
   haplotype_ids
 ) {
   haplotypes <- rep(NA, length(haplotype_ids))
