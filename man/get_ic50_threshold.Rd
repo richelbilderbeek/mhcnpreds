@@ -10,8 +10,11 @@ get_ic50_threshold(peptide_length = 9, mhc_haplotype, percentile = 0.02)
 \item{peptide_length}{length of the peptide in amino acids}
 
 \item{mhc_haplotype}{haplotype of either HMC-I or MHC-II.
-Use \link{get_mhc1_haplotypes} to get a list of all MHC-I haplotypes.
-Use \link{get_mhc2_haplotypes} to get a list of all MHC-II haplotypes.}
+in MHCnuggetsr format.
+Use \code{mhcnuggetsr::get_mhc_1_haplotypes}
+to get a list of all MHC-I haplotypes.
+Use \code{mhcnuggetsr::get_mhc_2_haplotypes}
+to get a list of all MHC-II haplotypes.}
 
 \item{percentile}{the IC50 percentile. The IC50 that separates the top
 \code{percentile} from the worse binders}

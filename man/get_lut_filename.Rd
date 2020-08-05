@@ -10,8 +10,11 @@ get_lut_filename(peptide_length, mhc_haplotype)
 \item{peptide_length}{length of the peptide in amino acids}
 
 \item{mhc_haplotype}{haplotype of either HMC-I or MHC-II.
-Use \link{get_mhc1_haplotypes} to get a list of all MHC-I haplotypes.
-Use \link{get_mhc2_haplotypes} to get a list of all MHC-II haplotypes.}
+in MHCnuggetsr format.
+Use \code{mhcnuggetsr::get_mhc_1_haplotypes}
+to get a list of all MHC-I haplotypes.
+Use \code{mhcnuggetsr::get_mhc_2_haplotypes}
+to get a list of all MHC-II haplotypes.}
 }
 \description{
 Get the filename for a lookup-table for a specific

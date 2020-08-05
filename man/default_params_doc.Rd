@@ -12,15 +12,11 @@ default_params_doc(
   ic50_threshold,
   max_hydrophobicity,
   mhc_haplotype,
-  mhc_1_haplotype,
-  mhc_2_haplotype,
   min_hydrophobicity,
-  n_aas,
   n_peptides,
   peptide_length,
   protein_sequence,
   protein_sequences,
-  source,
   verbose
 )
 }
@@ -40,18 +36,13 @@ A threshold of 500 (nM) is common.}
 \item{max_hydrophobicity}{the maximal hydrophobicity}
 
 \item{mhc_haplotype}{haplotype of either HMC-I or MHC-II.
-Use \link{get_mhc1_haplotypes} to get a list of all MHC-I haplotypes.
-Use \link{get_mhc2_haplotypes} to get a list of all MHC-II haplotypes.}
-
-\item{mhc_1_haplotype}{HMC-I haplotope.
-Use \link{get_mhc1_haplotypes} to get a list of all haplotypes}
-
-\item{mhc_2_haplotype}{HMC-II haplotope.
-Use \link{get_mhc2_haplotypes} to get a list of all haplotypes}
+in MHCnuggetsr format.
+Use \code{mhcnuggetsr::get_mhc_1_haplotypes}
+to get a list of all MHC-I haplotypes.
+Use \code{mhcnuggetsr::get_mhc_2_haplotypes}
+to get a list of all MHC-II haplotypes.}
 
 \item{min_hydrophobicity}{the minimal hydrophobicity}
-
-\item{n_aas}{number of amino acids}
 
 \item{n_peptides}{number of peptides}
 
@@ -60,12 +51,6 @@ Use \link{get_mhc2_haplotypes} to get a list of all haplotypes}
 \item{protein_sequence}{a protein sequence}
 
 \item{protein_sequences}{one or more protein sequences}
-
-\item{source}{source of IC50s:\cr
-\enumerate{
-  \item \code{random} base quantiles on randomly simulated peptides
-  \item \code{NA} use old interface, to become obsoleted
-}}
 
 \item{verbose}{set to TRUE for more output}
 }
