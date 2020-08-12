@@ -7,13 +7,16 @@ r_github_packages:
   - jimhester/lintr
   - richelbilderbeek/mhcnuggetsr
 
-
 before_script:
   - Rscript -e 'mhcnuggetsr::install_mhcnuggets()'
 
-after_success:
+script:
+  - travis_wait 60 R CMD build .
+  - travis_wait 60 R CMD check *tar.gz
   - Rscript -e 'remotes::install_github("richelbilderbeek/mhcnpreds", ref = "develop")'
   - Rscript scripts/measure_speed/measure_speed.R
+
+after_success:
   - Rscript -e 'lintr::lint_package()'
   - Rscript -e 'covr::codecov()'
   - Rscript -e 'goodpractice::gp()'
