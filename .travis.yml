@@ -11,6 +11,9 @@ r_github_packages:
 before_script:
   - Rscript -e 'mhcnuggetsr::install_mhcnuggets()'
 
+after_script:
+  - Rscript -e 'scripts/measure_speed/measure_speed.R'
+
 after_success:
   - Rscript -e 'lintr::lint_package()'
   - Rscript -e 'covr::codecov()'
