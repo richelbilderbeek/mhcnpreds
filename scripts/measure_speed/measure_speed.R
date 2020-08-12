@@ -7,10 +7,14 @@ haplotypes <- c(
 )
 peptide_lengths <- c(9, 10)
 
+
+duration <- lubridate::minutes(5)
+
+
 # Run 5 minutes
 run_interval <- lubridate::interval(
   start = lubridate::now(),
-  end = lubridate::now() + lubridate::minutes(5)
+  end = lubridate::now() + duration
 )
 
 i <- 1
@@ -24,7 +28,8 @@ for (haplotype in haplotypes) {
       )
     )
     if (!lubridate::now() %within% run_interval) {
-      message("Processed ", i, " lookups")
+      message("Processed ", i, " lookups in ", duration)
+      message("Average time per lookup: ", lubridate::seconds(duration) / i)
       q()
     }
     i <- i + 1
