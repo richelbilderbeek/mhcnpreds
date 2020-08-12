@@ -35,3 +35,7 @@ for (haplotype in haplotypes) {
     i <- i + 1
   }
 }
+
+message("Done!")
+message("Processed ", i, " lookups in ", duration)
+message("Average time per lookup: ", lubridate::seconds(duration) / i)
