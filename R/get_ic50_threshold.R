@@ -13,17 +13,9 @@ get_ic50_threshold <- function(
   mhc_haplotype,
   percentile = 0.02
 ) {
-  filename <- mhcnpreds::get_lut_filename(
+  lut <- mhcnpreds::get_lut(
     peptide_length = peptide_length,
     mhc_haplotype = mhc_haplotype
-  )
-  lut <- readr::read_csv(
-    filename,
-    col_types = readr::cols(
-      q = readr::col_double(),
-      ic50 = readr::col_double()
-    )
-
   )
   mhcnpreds::convert_quantile_to_ic50(lut = lut, q = percentile)
 }

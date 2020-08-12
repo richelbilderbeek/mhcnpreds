@@ -6,6 +6,17 @@ convert_quantile_to_ic50 <- function(
   lut,
   q
 ) {
+  mhcnpreds::convert_quantile_to_ic50_old(lut = lut, q = q)
+}
+
+#' Convert a quantile to an IC50, olskool
+#' @param lut lookup table
+#' @param q the quantile
+#' @export
+convert_quantile_to_ic50_old <- function(
+  lut,
+  q
+) {
   if (q <= 0.0) return(lut$ic50[1])
   if (q >= 1.0) return(utils::tail(lut$ic50, n = 1))
 
@@ -28,4 +39,15 @@ convert_quantile_to_ic50 <- function(
   d <- ic50_above - ic50_below
 
   ic50_below + (f * d)
+}
+
+#' Convert a quantile to an IC50, new school
+#' @param lut lookup table
+#' @param q the quantile
+#' @export
+convert_quantile_to_ic50_new <- function(
+  lut,
+  q
+) {
+  mhcnpreds::convert_quantile_to_ic50_old(lut = lut, q = q)
 }
