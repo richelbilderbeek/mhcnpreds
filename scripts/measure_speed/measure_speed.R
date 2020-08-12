@@ -10,6 +10,7 @@ peptide_lengths <- c(9, 10)
 
 duration <- lubridate::minutes(5)
 
+verbose <- FALSE
 
 # Run 5 minutes
 run_interval <- lubridate::interval(
@@ -20,13 +21,13 @@ run_interval <- lubridate::interval(
 i <- 1
 for (haplotype in haplotypes) {
   for (peptide_length in peptide_lengths) {
-    message(
-      "#", i, ": ",
-      mhcnpreds::get_ic50_threshold(
-        peptide_length = peptide_length,
-        mhc_haplotype = haplotype
-      )
+    ic50_threshold <- mhcnpreds::get_ic50_threshold(
+      peptide_length = peptide_length,
+      mhc_haplotype = haplotype
     )
+    if (isTRUE(verbose)) {
+      message("#", i, ": ", ic50_threshold)
+    }
     if (!lubridate::now() %within% run_interval) {
       message("Processed ", i, " lookups in ", duration)
       message("Average time per lookup: ", lubridate::seconds(duration) / i)
