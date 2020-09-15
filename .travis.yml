@@ -22,11 +22,13 @@ after_success:
   - Rscript -e 'covr::codecov()'
   - Rscript -e 'goodpractice::gp()'
   - Rscript -e 'mhcnuggetsr::mhcnuggetsr_report()'
+  # Download thesis
+  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
 
 after_failure:
   - Rscript -e 'mhcnuggetsr::mhcnuggetsr_report()'
   - pwd
   - find . | egrep "fasta"
-
-
+  # Download thesis
+  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
 
