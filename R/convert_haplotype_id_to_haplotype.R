@@ -5,7 +5,9 @@
 #' @inheritParams default_params_doc
 #' @author Richèl J.C. Bilderbeek
 #' @examples
-#' convert_haplotype_id_to_haplotype("h13")
+#' if (mhcnuggetsr::is_mhcnuggets_installed()) {
+#'   convert_haplotype_id_to_haplotype("h13")
+#' }
 #' @export
 convert_haplotype_id_to_haplotype <- function(#nolint indeed a long function name
   haplotype_id

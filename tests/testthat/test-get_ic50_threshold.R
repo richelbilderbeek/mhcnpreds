@@ -1,4 +1,5 @@
 test_that("use", {
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
 
   expect_silent(
     get_lut_filename(
@@ -16,7 +17,7 @@ test_that("use", {
 })
 
 test_that("detailed use", {
-
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
   t <- readr::read_csv(
     get_lut_filename(
       peptide_length = 9,

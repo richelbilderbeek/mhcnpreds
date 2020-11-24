@@ -1,4 +1,5 @@
 test_that("use", {
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
   peptide_length <- 9
   mhc_haplotype <- "HLA-A01:01"
 

@@ -1,4 +1,5 @@
 test_that("use", {
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
   peptide_length <- 9
   mhc_haplotype <- "HLA-A01:01"
 
@@ -10,6 +11,8 @@ test_that("use", {
 })
 
 test_that("abuse", {
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
+
   peptide_length <- 9
   mhc_haplotype <- "HLA-A01:01"
 

@@ -1,4 +1,5 @@
 test_that("use", {
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
   lut <- get_haplotype_lut()
   index <- 42
   haplotype_id <- lut$id[index]

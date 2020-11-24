@@ -20,7 +20,7 @@ test_that("use", {
 
 test_that("speed", {
 
-  get_haplotype_lut()
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
   lowest <- 3.0
   highest <- 4.0
   lut <- convert_ic50s_to_quantiles(c(lowest, highest), n = 2)

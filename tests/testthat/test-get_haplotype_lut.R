@@ -1,4 +1,5 @@
 test_that("use", {
+  if (!mhcnuggetsr::is_mhcnuggets_installed()) return()
   haplotypes <- c(
     mhcnuggetsr::get_trained_mhc_1_haplotypes(),
     mhcnuggetsr::get_trained_mhc_2_haplotypes()
