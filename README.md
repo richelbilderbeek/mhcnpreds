@@ -5,7 +5,7 @@ Branch   |[![Travis CI logo](man/figures/TravisCI.png)](https://travis-ci.org)  
 `master` |[![Build Status](https://travis-ci.org/richelbilderbeek/mhcnpreds.svg?branch=master)](https://travis-ci.org/richelbilderbeek/mhcnpreds)  | [![codecov.io](https://codecov.io/github/richelbilderbeek/mhcnpreds/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/mhcnpreds?branch=master)
 `develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/mhcnpreds.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/mhcnpreds) | [![codecov.io](https://codecov.io/github/richelbilderbeek/mhcnpreds/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/mhcnpreds?branch=develop)
 
-The Bilderbeek Bianchi and Bogaart Question helper functions.
+Look-up tables for `mhcnuggetsr`.
 
 ## [Install](install.Rmd)
 
