@@ -21,7 +21,7 @@ after_success:
   - Rscript -e 'goodpractice::gp()'
   - Rscript -e 'mhcnuggetsr::mhcnuggetsr_report()'
   # Download thesis
-  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+  - wget https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf
 
 
 after_failure:
@@ -29,5 +29,5 @@ after_failure:
   - pwd
   - find . | egrep "fasta"
   # Download thesis
-  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+  - wget https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf
 
