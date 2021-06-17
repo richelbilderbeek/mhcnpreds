@@ -29,7 +29,7 @@ ggplot(
 ) + geom_col(position = "dodge") +
   theme(
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
-  ) + ggsave("compare_versions_p100.png", width = 7, height = 7)
+  ); ggsave("compare_versions_p100.png", width = 7, height = 7)
 
 
 
